@@ -25,8 +25,6 @@ def test_demoqa_registration_positive(browser_configs):
     browser.element('#currentAddress').type('City Saint-P')
     browser.element('#react-select-3-input').should(be.blank).type('Rajasthan').press_enter()
     browser.element('#react-select-4-input').should(be.blank).type('Jaiselmer').press_enter().press_enter()
-    # browser.driver.execute_script('window.scrollBy(0, 800)')
-    # browser.element('#submit').click()
     # Проверка результатов
     browser.element('#example-modal-sizes-title-lg').should(have.exact_text('Thanks for submitting the form'))
     browser.element('//tbody/tr[1]/td[2]').should(have.text('User Default'))
